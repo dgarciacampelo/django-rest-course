@@ -225,11 +225,11 @@ Let's make some calls to our new endpoint.
 
 3) Call our endpoints - Here are the requests we can make to our new endpoints.
 
-> This retrieves the auth token for **your_username**
+> This retrieves the auth token for **your_username** (using **daniel**)
 
-curl -X POST -F 'username=**your_username**' -F 'password=**your_password**' http://api:8000/api-token-auth/
+curl -X POST -F 'username=**daniel**' -F 'password=**your_password**' http://api:8000/api-token-auth/
 
-http post http://api:8000/api-token-auth/ username=**your_username** password=**your_password**
+http post http://api:8000/api-token-auth/ username=**daniel** password=**your_password**
 
 
 > This will retrieve all items

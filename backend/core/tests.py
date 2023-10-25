@@ -22,7 +22,6 @@ class ContactTestCase(APITestCase):
 
     def test_create_contact(self):
         """Test ContactViewSet create method"""
-
         print("Testing for valid data (1 contact in db)...")
         data = create_contact_data()
         response = self.client.post(self.url, data)
@@ -32,7 +31,6 @@ class ContactTestCase(APITestCase):
 
     def test_create_contact_with_blank_fields(self):
         """Test ContactViewSet create method with blank fields"""
-
         fields_to_test = ["name", "message", "email"]
 
         for field in fields_to_test:
@@ -44,7 +42,6 @@ class ContactTestCase(APITestCase):
 
     def test_create_contact_with_missing_fields(self):
         """Test ContactViewSet create method with missing fields"""
-
         fields_to_test = ["name", "message", "email"]
 
         for field in fields_to_test:
@@ -57,7 +54,6 @@ class ContactTestCase(APITestCase):
 
     def test_create_contact_when_email_equals_non_email(self):
         """test ContactViewSet create method when email is not email"""
-
         print("Testing for non-email email...")
         data = create_contact_data()
         data["email"] = "test"
